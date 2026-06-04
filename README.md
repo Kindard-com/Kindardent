@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kindardent.com 
 
-## Getting Started
+Premium Kids Streetwear meets Web3. The official e-commerce frontend for Kindardent and the $KDAT token.
 
-First, run the development server:
+## 🛠 Tech Stack
 
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling:** Custom Vanilla CSS / Tailwind (Stark Brutalist Aesthetic)
+- **Web3 Integration:** [Wagmi](https://wagmi.sh/) + [Reown AppKit](https://reown.com/appkit)
+- **Database:** [Turso](https://turso.tech/) (libSQL / Edge SQLite) for User Profiles
+
+---
+
+## 🚀 How to Install & Run Locally
+
+### 1. Prerequisites
+Ensure you have the following installed on your machine:
+- **Node.js** (v18 or higher recommended)
+- **npm** (comes with Node.js)
+- **Git**
+
+### 2. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Kindard-com/Kindardent.git
+cd Kindardent
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Install Dependencies
+Run the following command to install all required packages (Next.js, Wagmi, Turso client, etc.):
+```bash
+npm install
+```
+*(Note: If you encounter peer dependency warnings related to Wagmi/AppKit, they are safe to ignore for local development).*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Database Configuration (Turso)
+The project is currently configured to connect to a Turso libSQL database for the `/profile` dashboard.
+- The connection URL and Auth Token are located in `lib/turso.ts`.
+- If you are setting up a *new* database, you will need to replace the `url` and `authToken` in that file with your own Turso credentials.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. Start the Development Server
+Start the local server (using the custom webpack flag required for our Web3 setup):
+```bash
+npm run dev
+```
 
-## Learn More
+### 6. View the App
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application running.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Key Features & Directory Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`/app/page.tsx`**: The main landing page with the hero commerce section.
+- **`/app/buy/page.tsx`**: The $KDAT token swap interface.
+- **`/app/profile/page.tsx`**: Web3 User Dashboard. Connects your Ethereum wallet to Turso to save your Avatar, Banner, and Display Name.
+- **`/app/whitepaper/page.tsx`**: $KDAT Tokenomics and Legal disclosures.
+- **`/lib/turso.ts`**: Database connection initialization.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Smart Contracts
+*(Note: The $KDAT smart contract integration is currently in prototype mode. Web3 UI components are active and reading real native ETH balances, but token swaps require the final deployed contract address).*
