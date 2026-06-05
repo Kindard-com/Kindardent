@@ -1,0 +1,92 @@
+/* 
+  Kindard Kids - Premium Admin Styling 
+  Overrides for Payload CMS default CSS Variables
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+
+:root {
+  /* Sleek modern typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-headings: 'Outfit', var(--font-body);
+
+  /* Light Theme Overrides - Vibrant and Premium */
+  --theme-bg: #fdfdfd;
+  --theme-elevation-0: #ffffff;
+  --theme-elevation-50: #f8fafc;
+  --theme-elevation-100: #f1f5f9;
+  
+  /* Harmonious Accents */
+  --theme-success-400: #059669;
+  --theme-error-400: #e11d48;
+  --theme-warning-400: #ea580c;
+
+  /* Button and Interactive elements */
+  --theme-elevation-500: #0f172a;
+}
+
+[data-theme='dark'] {
+  /* Sleek Dark Mode Overrides */
+  --theme-bg: #09090b; /* Very dark zinc */
+  --theme-elevation-0: #18181b; 
+  --theme-elevation-50: #27272a;
+  --theme-elevation-100: #3f3f46;
+
+  /* Harmonious Accents for Dark Mode */
+  --theme-success-400: #10b981;
+  --theme-error-400: #fb7185;
+  --theme-warning-400: #fb923c;
+
+  --theme-elevation-500: #f8fafc;
+}
+
+/* Micro-animations and structural enhancements */
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, .nav__group-title {
+  font-family: var(--font-headings);
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 8px !important;
+  letter-spacing: 0.025em;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme='dark'] .btn:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Form Inputs */
+input[type="text"], input[type="email"], input[type="password"], textarea, .react-select__control {
+  border-radius: 6px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+input:focus, textarea:focus, .react-select__control--is-focused {
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1) !important;
+}
+
+[data-theme='dark'] input:focus, 
+[data-theme='dark'] textarea:focus, 
+[data-theme='dark'] .react-select__control--is-focused {
+  box-shadow: 0 0 0 2px rgba(248, 250, 252, 0.1) !important;
+}
+
+/* Brand Area Customization */
+.login__brand, .nav__brand {
+  transition: transform 0.3s ease;
+}
+
+.login__brand:hover, .nav__brand:hover {
+  transform: scale(1.02);
+}
