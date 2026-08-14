@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useAccount, useBalance } from "wagmi";
+import { formatEther } from "viem";
 import Link from "next/link";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 
@@ -228,8 +229,12 @@ export default function ProfilePage() {
               <div>
                 <span style={{ display: "block", fontSize: "0.72rem", fontFamily: "var(--font-condensed)", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--mid)", marginBottom: "0.25rem" }}>Wallet Balance</span>
                 <span className="heading-editorial" style={{ fontSize: "3rem", color: "var(--black)", lineHeight: 1 }}>
-                  {balanceData ? Number(balanceData.formatted).toFixed(4) : "0.0000"}
-                  <span style={{ fontSize: "1rem", marginLeft: "0.4rem", fontFamily: "var(--font-condensed)", fontWeight: 400 }}>ETH</span>
+                  {balanceData
+                    ? Number(formatEther(balanceData.value)).toFixed(4)
+                    : "0.0000"}
+                  <span style={{ fontSize: "1rem", marginLeft: "0.4rem", fontFamily: "var(--font-condensed)", fontWeight: 400 }}>
+                    {balanceData?.symbol ?? "ETH"}
+                  </span>
                 </span>
               </div>
 

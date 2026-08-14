@@ -2,36 +2,35 @@
 
 Premium kids streetwear meets Web3 — Next.js storefront for Kindard Kids and the `$KDAT` token.
 
-**Repo:** https://github.com/Kindard-com/Kindardent
+**Repo:** https://github.com/Kindard-com/Kindardent  
+**Demo gallery:** [docs/index.html](docs/index.html) · photos & video below
 
 ---
 
-## Preview
+## Photos & video
 
 ### Homepage
-<img src="docs/demo/home.png" alt="Kindardent homepage" width="100%" />
+![Kindardent homepage](docs/demo/home.png)
 
-### Connect Wallet (Reown AppKit SDK)
-<img src="docs/demo/wallet-modal.png" alt="Connect Wallet modal with MetaMask, WalletConnect, Trust Wallet" width="100%" />
+### Connect Wallet — Reown AppKit SDK
+![Connect Wallet modal](docs/demo/wallet-modal.png)
 
 ### Buy / Invest ($KDAT)
-<img src="docs/demo/buy-kdat.png" alt="$KDAT buy and swap page" width="100%" />
+![Buy $KDAT](docs/demo/buy-kdat.png)
 
 ### Profile
-<img src="docs/demo/profile.png" alt="Wallet-gated profile page" width="100%" />
+![Profile wallet gate](docs/demo/profile.png)
 
 ### Stores
-<img src="docs/demo/stores.png" alt="Stores index page" width="100%" />
+![Stores](docs/demo/stores.png)
 
-### Demo video
+### Walkthrough video
 
-<video src="docs/demo/kindardent-demo.mp4" controls width="100%">
-  Your browser does not support the video tag.
-  <a href="docs/demo/kindardent-demo.mp4">Download the demo video (MP4)</a>
-</video>
+https://github.com/Kindard-com/Kindardent/raw/cursor/test-docs-public-ac77/docs/demo/kindardent-demo.mp4
 
-If the player does not show in your viewer, open the file directly:  
-**[▶ Play / download demo video](docs/demo/kindardent-demo.mp4)**
+[▶ Download / play demo video (MP4)](docs/demo/kindardent-demo.mp4)
+
+<video src="docs/demo/kindardent-demo.mp4" controls width="100%"></video>
 
 ---
 
@@ -62,15 +61,13 @@ cd Kindardent
 cp .env.example .env.local
 ```
 
-Set at least:
-
 | Variable | Purpose |
 |---|---|
 | `TURSO_DATABASE_URL` | Turso libSQL URL |
 | `TURSO_AUTH_TOKEN` | Turso auth token |
-| `NEXT_PUBLIC_REOWN_PROJECT_ID` | Reown Cloud project ID (optional; a default is embedded for demos) |
+| `NEXT_PUBLIC_REOWN_PROJECT_ID` | Reown Cloud project ID (optional) |
 | `PAYLOAD_SECRET` | Payload CMS secret |
-| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Only for local admin seed |
+| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Local admin seed only |
 
 Never commit `.env.local` or real secrets.
 
@@ -81,14 +78,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-### SDK smoke test (optional)
-With the dev server running:
-```bash
-npx playwright install chromium
-node scripts/test-wallet.mjs
-```
-This clicks **Connect Wallet**, asserts the AppKit modal mounts, and refreshes screenshots under `docs/demo/`.
 
 ---
 
@@ -105,18 +94,11 @@ This clicks **Connect Wallet**, asserts the AppKit modal mounts, and refreshes s
 
 ---
 
-## Media files
+## GitHub Pages
 
-All demo assets live in [`docs/demo/`](docs/demo/):
+Enable **Settings → Pages → Source: GitHub Actions**. The `Deploy GitHub Pages` workflow publishes [`docs/`](docs/) (gallery + screenshots + video).
 
-| File | Description |
-|---|---|
-| `home.png` | Homepage hero |
-| `wallet-modal.png` | AppKit Connect Wallet modal |
-| `buy-kdat.png` | Invest / swap UI |
-| `profile.png` | Profile wallet gate |
-| `stores.png` | Stores listing |
-| `kindardent-demo.mp4` | Short walkthrough video |
+Until Pages is enabled, open [`docs/index.html`](docs/index.html) in the repo or browse images under [`docs/demo/`](docs/demo/).
 
 ---
 

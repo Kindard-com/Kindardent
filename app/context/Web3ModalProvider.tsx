@@ -46,7 +46,6 @@ createAppKit({
   themeMode: "light",
   themeVariables: {
     "--w3m-accent": "#2563EB",
-    "--w3m-color-inverse": "#FFFFFF",
     "--w3m-border-radius-master": "1px",
   },
 });
