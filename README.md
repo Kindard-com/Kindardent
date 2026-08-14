@@ -6,27 +6,32 @@ Premium kids streetwear meets Web3 — Next.js storefront for Kindard Kids and t
 
 ---
 
-## Demo (tested locally)
-
-Screenshots and a short walkthrough captured against `npm run dev` on Aug 14, 2026.
+## Preview
 
 ### Homepage
-![Homepage](docs/demo/home.png)
+<img src="docs/demo/home.png" alt="Kindardent homepage" width="100%" />
 
-### Connect Wallet (Reown AppKit / Wagmi SDK)
-![Wallet modal](docs/demo/wallet-modal.png)
+### Connect Wallet (Reown AppKit SDK)
+<img src="docs/demo/wallet-modal.png" alt="Connect Wallet modal with MetaMask, WalletConnect, Trust Wallet" width="100%" />
 
 ### Buy / Invest ($KDAT)
-![Buy $KDAT](docs/demo/buy-kdat.png)
+<img src="docs/demo/buy-kdat.png" alt="$KDAT buy and swap page" width="100%" />
 
-### Profile (wallet gate)
-![Profile](docs/demo/profile.png)
+### Profile
+<img src="docs/demo/profile.png" alt="Wallet-gated profile page" width="100%" />
 
 ### Stores
-![Stores](docs/demo/stores.png)
+<img src="docs/demo/stores.png" alt="Stores index page" width="100%" />
 
-### Walkthrough video
-[Watch the demo video](docs/demo/kindardent-demo.mp4)
+### Demo video
+
+<video src="docs/demo/kindardent-demo.mp4" controls width="100%">
+  Your browser does not support the video tag.
+  <a href="docs/demo/kindardent-demo.mp4">Download the demo video (MP4)</a>
+</video>
+
+If the player does not show in your viewer, open the file directly:  
+**[▶ Play / download demo video](docs/demo/kindardent-demo.mp4)**
 
 ---
 
@@ -100,13 +105,18 @@ This clicks **Connect Wallet**, asserts the AppKit modal mounts, and refreshes s
 
 ---
 
-## Test notes (this branch)
+## Media files
 
-- Homepage, buy, profile, whitepaper, about, stores: **200 OK**
-- Reown AppKit modal opens via `useAppKit().open()` (MetaMask, WalletConnect, Trust, etc.)
-- Profile API `/api/profile` responds when Turso env is set
-- Secrets removed from source (`lib/turso.ts`, seed routes); use `.env.local`
-- `/stores` index page restored (was 404)
+All demo assets live in [`docs/demo/`](docs/demo/):
+
+| File | Description |
+|---|---|
+| `home.png` | Homepage hero |
+| `wallet-modal.png` | AppKit Connect Wallet modal |
+| `buy-kdat.png` | Invest / swap UI |
+| `profile.png` | Profile wallet gate |
+| `stores.png` | Stores listing |
+| `kindardent-demo.mp4` | Short walkthrough video |
 
 ---
 
