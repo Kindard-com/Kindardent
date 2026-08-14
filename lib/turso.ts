@@ -1,9 +1,17 @@
 import { createClient } from "@libsql/client";
 
+const url = process.env.TURSO_DATABASE_URL ?? process.env.DATABASE_URL;
+const authToken = process.env.TURSO_AUTH_TOKEN ?? process.env.DATABASE_AUTH_TOKEN;
+
+if (!url || !authToken) {
+  console.warn(
+    "[turso] Missing TURSO_DATABASE_URL / TURSO_AUTH_TOKEN (or DATABASE_*). Profile API will fail until configured."
+  );
+}
+
 export const turso = createClient({
-  url: "libsql://kindardent-kindard.aws-eu-west-1.turso.io",
-  authToken:
-    "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3ODA1Mzk3MzksImlkIjoiMDE5ZTkwNTktM2UwMS03ODQxLTk2M2MtYWM1NmQxMTcxZjkxIiwicmlkIjoiODU4ZjdiNWMtYWJlMS00OWNjLTgxMmQtYjZkMzcyOGI2ZWNiIn0.M-DdifwgspRBfYHGUgUiGkhpC88MhlUDugUTIg1LARCwrLDdtnQ2MVK_5Qha3Q-PkhhbNBOYt-o57wA4y9NMCw",
+  url: url || "file:local.db",
+  authToken: authToken || "",
 });
 
 // Ensure the user_profiles table exists

@@ -1,0 +1,47 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: ["main", "cursor/test-docs-public-ac77"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Upload artifact
+        if: steps.pages.outcome == 'success'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: steps.pages.outcome == 'success'
+        uses: actions/deploy-pages@v4
+
+      - name: Pages not enabled
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo "::notice::GitHub Pages is not enabled for this repository yet."
+          echo "Enable it under Settings → Pages → Source: GitHub Actions."
+          echo "Demo gallery is available at docs/index.html in the repo."

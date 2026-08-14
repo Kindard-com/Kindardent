@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ConnectWalletButton from "./ConnectWalletButton";
 
 const navLinks = [
   { label: "Shop All", href: "/" },
@@ -116,7 +117,7 @@ export default function SiteHeader() {
             </svg>
           </Link>
 
-          <appkit-button balance="show" />
+          <ConnectWalletButton />
 
           <a
             href="https://kindard.com"
@@ -171,7 +172,7 @@ export default function SiteHeader() {
             </svg>
           </Link>
 
-          <appkit-button balance="show" />
+          <ConnectWalletButton />
 
           <a
             href="https://kindard.com"
@@ -279,7 +280,7 @@ export default function SiteHeader() {
 
         {/* Bottom CTAs */}
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginTop: "3rem" }}>
-          <div><appkit-button balance="show" /></div>
+          <div><ConnectWalletButton /></div>
           <a
             href="https://kindard.com"
             target="_blank"

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ConnectWalletButton from "../components/ConnectWalletButton";
 
 export default function BuyKdatPage() {
   const [ethAmount, setEthAmount] = useState("");
@@ -65,7 +66,7 @@ export default function BuyKdatPage() {
           <div style={{ background: "var(--white)", padding: "2rem", border: "1px solid var(--black)", boxShadow: "8px 8px 0px rgba(0,0,0,1)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
               <h2 className="heading-condensed" style={{ fontSize: "1.5rem", margin: 0, color: "var(--black)" }}>SWAP ETH FOR $KDAT</h2>
-              <appkit-button balance="show" />
+              <ConnectWalletButton />
             </div>
             
             <div style={{ background: "#EFEBE1", padding: "1rem", border: "1px solid var(--black)", marginBottom: "1rem" }}>

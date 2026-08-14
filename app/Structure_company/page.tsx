@@ -198,7 +198,7 @@ export default function StructureCompanyPage() {
                       {detail.k}
                     </div>
                     <div style={{ flex: 1, padding: "0.75rem 1rem", fontWeight: 300, fontSize: "0.85rem", color: "#3a3a3a" }}>
-                      {detail.isLink ? (
+                      {detail.v.startsWith("http://") || detail.v.startsWith("https://") ? (
                         <a href={detail.v} target="_blank" rel="noopener noreferrer" style={{ color: "var(--black)", textDecoration: "underline" }}>
                           {detail.v}
                         </a>

@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        env:
+          PAYLOAD_SECRET: ci-build-secret
+          DATABASE_URL: file:./ci.db
+          DATABASE_AUTH_TOKEN: ""
+          TURSO_DATABASE_URL: file:./ci.db
+          TURSO_AUTH_TOKEN: ""
+          NEXT_PUBLIC_REOWN_PROJECT_ID: "059a8d474461767b617acb5f307cb128"
+        run: npm run build
