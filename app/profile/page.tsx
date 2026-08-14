@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useAccount, useBalance } from "wagmi";
 import Link from "next/link";
+import ConnectWalletButton from "../components/ConnectWalletButton";
 
 // Convert a File to a base64 data URL
 function fileToBase64(file: File): Promise<string> {
@@ -98,8 +99,7 @@ export default function ProfilePage() {
           <p style={{ fontFamily: "var(--font-body)", color: "var(--mid)", marginBottom: "2rem", fontSize: "1rem" }}>
             Your profile is linked to your Ethereum wallet address.<br />Connect to access your dashboard.
           </p>
-          {/* @ts-ignore */}
-          <appkit-button balance="show" />
+          <ConnectWalletButton />
         </div>
       </main>
     );
