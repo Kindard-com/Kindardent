@@ -21,15 +21,17 @@ const wagmiAdapter = new WagmiAdapter({
   ssr: true,
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  (typeof window !== "undefined"
+    ? window.location.origin
+    : "https://kindardent.com");
+
 const metadata = {
   name: "Kindard Kids",
   description: "Kindard Kids $KDAT Token Sale",
-  // Must match the page origin in local/dev or WalletConnect may refuse the modal.
-  url:
-    typeof window !== "undefined"
-      ? window.location.origin
-      : "http://localhost:3000",
-  icons: ["https://kindard.com/favicon.ico"],
+  url: siteUrl,
+  icons: [`${siteUrl}/favicon.ico`],
 };
 
 createAppKit({

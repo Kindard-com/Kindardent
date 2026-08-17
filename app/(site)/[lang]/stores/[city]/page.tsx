@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { stores, storesBySlug } from "../data";
-import Marquee from "../../components/Marquee";
+import Marquee from "@/app/components/Marquee";
 
 interface Props {
   params: Promise<{ city: string }>;

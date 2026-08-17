@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Marquee from "../components/Marquee";
+import Marquee from "@/app/components/Marquee";
 
 export const metadata: Metadata = {
   title: "Shipping Info",

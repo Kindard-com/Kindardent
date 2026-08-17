@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "Kindard Kids",
+    "defaultTitle": "Kindard Kids — Streetwear premium pour enfants",
+    "defaultDescription": "Streetwear premium pour enfants, depuis Amsterdam. Qualité indestructible, liberté de mouvement, matériaux responsables."
+  },
+  "nav": {
+    "shopAll": "Tout voir",
+    "whitepaper": "Whitepaper",
+    "invest": "Investir",
+    "cpStructure": "Structure CP",
+    "profile": "Profil",
+    "connectWallet": "Connecter le wallet",
+    "shopExternal": "Boutique sur kindard.com",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "home": "Accueil Kindardent",
+    "language": "Langue"
+  },
+  "footer": {
+    "joinTribe": "REJOIGNEZ LA TRIBU",
+    "joinSub": "DROPS EXCLUSIFS. ACCÈS ANTICIPÉ. RIEN D'AUTRE.",
+    "emailPlaceholder": "VOTRE E-MAIL",
+    "subscribe": "S'ABONNER →",
+    "legal": "Mentions légales",
+    "help": "Aide",
+    "company": "Entreprise",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Paramètres cookies",
+    "helpContact": "Aide & Contact",
+    "shipping": "Livraison",
+    "returns": "Retours & Échanges",
+    "track": "Suivre ma commande",
+    "sizeGuide": "Guide des tailles",
+    "about": "À propos de Kindard",
+    "sustainability": "Durabilité",
+    "careers": "Carrières",
+    "stores": "Boutiques",
+    "cpStructure": "Structure CP",
+    "copyright": "Kindard Kids — Amsterdam",
+    "madeWith": "FAIT AVEC INTENTION"
+  },
+  "home": {
+    "dropLabel": "DROP 01 — EN LIGNE",
+    "heroTitle": "AUCUN COMPROMIS. JUSTE DES VÊTEMENTS.",
+    "heroCta": "INVESTIR DANS LE TOKEN",
+    "newArrivals": "Nouveautés",
+    "viewAll": "Tout voir",
+    "quickAdd": "Ajout rapide"
+  },
+  "buy": {
+    "title": "INVESTIR DANS $KDAT",
+    "subtitle": "Le token utilitaire premium de l'écosystème Kindardent. Échangez en toute sécurité sur Ethereum.",
+    "whyInvest": "POURQUOI INVESTIR ?",
+    "swapTitle": "ÉCHANGER ETH CONTRE $KDAT",
+    "confirmSwap": "CONFIRMER L'ÉCHANGE",
+    "walletHint": "Assurez-vous que votre wallet est connecté au réseau Ethereum Mainnet."
+  },
+  "profile": {
+    "connectTitle": "CONNECTEZ VOTRE WALLET",
+    "connectBody": "Votre profil est lié à votre adresse Ethereum. Connectez-vous pour accéder à votre tableau de bord.",
+    "loading": "Chargement du profil…"
+  }
+}

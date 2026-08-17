@@ -3,6 +3,10 @@ import config from '../../../payload.config'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
+  if (process.env.NODE_ENV === "production") {
+    return NextResponse.json({ error: "Disabled in production." }, { status: 403 });
+  }
+
   const email = process.env.ADMIN_EMAIL
   const password = process.env.ADMIN_PASSWORD
 

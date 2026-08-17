@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "Kindard Kids",
+    "defaultTitle": "Kindard Kids — Premium Kids Streetwear",
+    "defaultDescription": "Premium children's streetwear from Amsterdam. Indestructible quality, unrestricted movement, guilt-free materials."
+  },
+  "nav": {
+    "shopAll": "Shop All",
+    "whitepaper": "Whitepaper",
+    "invest": "Invest",
+    "cpStructure": "CP Structure",
+    "profile": "Profile",
+    "connectWallet": "Connect Wallet",
+    "shopExternal": "Shop at kindard.com",
+    "openMenu": "Open mobile menu",
+    "closeMenu": "Close menu",
+    "home": "Kindardent Home",
+    "language": "Language"
+  },
+  "footer": {
+    "joinTribe": "JOIN THE TRIBE",
+    "joinSub": "EXCLUSIVE DROPS. EARLY ACCESS. NOTHING ELSE.",
+    "emailPlaceholder": "YOUR EMAIL",
+    "subscribe": "SUBSCRIBE →",
+    "legal": "Legal",
+    "help": "Help",
+    "company": "Company",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "helpContact": "Help & Contact",
+    "shipping": "Shipping Info",
+    "returns": "Returns & Exchanges",
+    "track": "Track My Order",
+    "sizeGuide": "Size Guide",
+    "about": "About Kindard",
+    "sustainability": "Sustainability",
+    "careers": "Careers",
+    "stores": "Stores",
+    "cpStructure": "CP Structure",
+    "copyright": "Kindard Kids — Amsterdam",
+    "madeWith": "MADE WITH INTENTION"
+  },
+  "home": {
+    "dropLabel": "DROP 01 — NOW LIVE",
+    "heroTitle": "NO COMPROMISE. JUST CLOTHES.",
+    "heroCta": "INVEST IN TOKEN",
+    "newArrivals": "New Arrivals",
+    "viewAll": "View All",
+    "quickAdd": "Quick Add"
+  },
+  "buy": {
+    "title": "INVEST IN $KDAT",
+    "subtitle": "The premium utility token for the Kindardent ecosystem. Trade securely on the Ethereum network.",
+    "whyInvest": "WHY INVEST?",
+    "swapTitle": "SWAP ETH FOR $KDAT",
+    "confirmSwap": "CONFIRM SWAP",
+    "walletHint": "Ensure your wallet is connected to Ethereum Mainnet."
+  },
+  "profile": {
+    "connectTitle": "CONNECT YOUR WALLET",
+    "connectBody": "Your profile is linked to your Ethereum wallet address. Connect to access your dashboard.",
+    "loading": "Loading profile…"
+  }
+}

@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import ConnectWalletButton from "../components/ConnectWalletButton";
+import ConnectWalletButton from "@/app/components/ConnectWalletButton";
+import { useI18n } from "@/app/context/I18nProvider";
 
 export default function BuyKdatPage() {
   const [ethAmount, setEthAmount] = useState("");
+  const { t } = useI18n();
 
   return (
     <main style={{ background: "var(--bg)", minHeight: "100vh", paddingTop: "68px" }}>
@@ -21,10 +23,10 @@ export default function BuyKdatPage() {
               style={{ marginBottom: "2rem" }} 
             />
             <h1 className="heading-editorial" style={{ fontSize: "clamp(3rem, 8vw, 5rem)", marginBottom: "1rem", lineHeight: 1 }}>
-              INVEST IN $KDAT
+              {t.buy.title}
             </h1>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto", fontWeight: 300, color: "var(--mid)" }}>
-              The premium utility token for the Kindardent ecosystem. Trade securely on the Ethereum network.
+              {t.buy.subtitle}
             </p>
           </div>
         </div>
@@ -36,7 +38,7 @@ export default function BuyKdatPage() {
           
           {/* Why Invest Content */}
           <div>
-            <h2 className="heading-condensed" style={{ fontSize: "2rem", marginBottom: "2rem", color: "var(--black)" }}>WHY INVEST?</h2>
+            <h2 className="heading-condensed" style={{ fontSize: "2rem", marginBottom: "2rem", color: "var(--black)" }}>{t.buy.whyInvest}</h2>
             
             <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
               <article>
@@ -65,8 +67,8 @@ export default function BuyKdatPage() {
           {/* Swap Interface */}
           <div style={{ background: "var(--white)", padding: "2rem", border: "1px solid var(--black)", boxShadow: "8px 8px 0px rgba(0,0,0,1)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
-              <h2 className="heading-condensed" style={{ fontSize: "1.5rem", margin: 0, color: "var(--black)" }}>SWAP ETH FOR $KDAT</h2>
-              <ConnectWalletButton />
+              <h2 className="heading-condensed" style={{ fontSize: "1.5rem", margin: 0, color: "var(--black)" }}>{t.buy.swapTitle}</h2>
+              <ConnectWalletButton label={t.nav.connectWallet} />
             </div>
             
             <div style={{ background: "#EFEBE1", padding: "1rem", border: "1px solid var(--black)", marginBottom: "1rem" }}>
@@ -101,10 +103,10 @@ export default function BuyKdatPage() {
                 alert("This is a Web3 frontend mockup for the $KDAT token sale. The Ethereum smart contracts are not yet deployed.");
               }}
             >
-              CONFIRM SWAP
+              {t.buy.confirmSwap}
             </button>
             <p style={{ textAlign: "center", fontSize: "0.75rem", marginTop: "1rem", color: "var(--mid)" }}>
-              Ensure your wallet is connected to Ethereum Mainnet.
+              {t.buy.walletHint}
             </p>
           </div>
 

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "Kindard Kids",
+    "defaultTitle": "Kindard Kids — Premium kinderstreetwear",
+    "defaultDescription": "Premium kinderstreetwear uit Amsterdam. Onverwoestbare kwaliteit, onbeperkte beweging, schuldige materialen."
+  },
+  "nav": {
+    "shopAll": "Shop alles",
+    "whitepaper": "Whitepaper",
+    "invest": "Investeren",
+    "cpStructure": "CP-structuur",
+    "profile": "Profiel",
+    "connectWallet": "Wallet verbinden",
+    "shopExternal": "Shop op kindard.com",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "home": "Kindardent home",
+    "language": "Taal"
+  },
+  "footer": {
+    "joinTribe": "WORD DEEL VAN DE TRIBE",
+    "joinSub": "EXCLUSIEVE DROPS. VROEGTIJDIGE TOEGANG. NIETS ANDERS.",
+    "emailPlaceholder": "JOUW E-MAIL",
+    "subscribe": "ABONNEREN →",
+    "legal": "Juridisch",
+    "help": "Help",
+    "company": "Bedrijf",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene voorwaarden",
+    "cookies": "Cookie-instellingen",
+    "helpContact": "Help & Contact",
+    "shipping": "Verzending",
+    "returns": "Retour & Ruilen",
+    "track": "Bestelling volgen",
+    "sizeGuide": "Maattabel",
+    "about": "Over Kindard",
+    "sustainability": "Duurzaamheid",
+    "careers": "Vacatures",
+    "stores": "Winkels",
+    "cpStructure": "CP-structuur",
+    "copyright": "Kindard Kids — Amsterdam",
+    "madeWith": "MET OPZET GEMAAKT"
+  },
+  "home": {
+    "dropLabel": "DROP 01 — NU LIVE",
+    "heroTitle": "GEEN COMPROMIS. ALLEEN KLEDING.",
+    "heroCta": "INVESTEER IN TOKEN",
+    "newArrivals": "Nieuw binnen",
+    "viewAll": "Alles bekijken",
+    "quickAdd": "Snel toevoegen"
+  },
+  "buy": {
+    "title": "INVESTEER IN $KDAT",
+    "subtitle": "De premium utility-token voor het Kindardent-ecosysteem. Veilig handelen op Ethereum.",
+    "whyInvest": "WAAROM INVESTEREN?",
+    "swapTitle": "WISSEL ETH VOOR $KDAT",
+    "confirmSwap": "WISSEL BEVESTIGEN",
+    "walletHint": "Zorg dat je wallet verbonden is met Ethereum Mainnet."
+  },
+  "profile": {
+    "connectTitle": "VERBIND JE WALLET",
+    "connectBody": "Je profiel is gekoppeld aan je Ethereum-walletadres. Verbind om je dashboard te openen.",
+    "loading": "Profiel laden…"
+  }
+}

@@ -4,7 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import { useAccount, useBalance } from "wagmi";
 import { formatEther } from "viem";
 import Link from "next/link";
-import ConnectWalletButton from "../components/ConnectWalletButton";
+import ConnectWalletButton from "@/app/components/ConnectWalletButton";
+import { useI18n } from "@/app/context/I18nProvider";
+import { localePath } from "@/lib/i18n/config";
 
 // Convert a File to a base64 data URL
 function fileToBase64(file: File): Promise<string> {
@@ -19,6 +21,7 @@ function fileToBase64(file: File): Promise<string> {
 export default function ProfilePage() {
   const { address, isConnected } = useAccount();
   const { data: balanceData } = useBalance({ address });
+  const { locale, t } = useI18n();
 
   const [avatar, setAvatar] = useState<string>("");
   const [banner, setBanner] = useState<string>("");
@@ -95,12 +98,12 @@ export default function ProfilePage() {
       <main style={{ background: "var(--bg)", minHeight: "100vh", paddingTop: "68px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ textAlign: "center", padding: "4rem 2rem" }}>
           <h1 className="heading-editorial" style={{ fontSize: "clamp(2rem,6vw,4rem)", marginBottom: "1.5rem" }}>
-            CONNECT YOUR WALLET
+            {t.profile.connectTitle}
           </h1>
           <p style={{ fontFamily: "var(--font-body)", color: "var(--mid)", marginBottom: "2rem", fontSize: "1rem" }}>
-            Your profile is linked to your Ethereum wallet address.<br />Connect to access your dashboard.
+            {t.profile.connectBody}
           </p>
-          <ConnectWalletButton />
+          <ConnectWalletButton label={t.nav.connectWallet} />
         </div>
       </main>
     );
@@ -110,7 +113,7 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <main style={{ background: "var(--bg)", minHeight: "100vh", paddingTop: "68px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <p style={{ fontFamily: "var(--font-condensed)", textTransform: "uppercase", letterSpacing: "0.1em" }}>Loading profile…</p>
+        <p style={{ fontFamily: "var(--font-condensed)", textTransform: "uppercase", letterSpacing: "0.1em" }}>{t.profile.loading}</p>
       </main>
     );
   }
@@ -247,7 +250,7 @@ export default function ProfilePage() {
               </div>
 
               <Link
-                href="/buy"
+                href={localePath(locale, "/buy")}
                 style={{ background: "var(--black)", color: "var(--white)", padding: "0.85rem 1.25rem", textDecoration: "none", fontFamily: "var(--font-condensed)", textTransform: "uppercase", letterSpacing: "0.08em", fontSize: "0.85rem", textAlign: "center", display: "block", marginTop: "auto" }}
               >
                 Invest More →
