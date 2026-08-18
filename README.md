@@ -84,7 +84,7 @@ Dev server: `npm run dev` → [http://localhost:3000](http://localhost:3000) (re
 
 - **Admin panel:** `https://kindardent.com/admin`
 - **API:** `https://kindardent.com/api/*`
-- Bootstrap admin locally only: set `ADMIN_EMAIL` / `ADMIN_PASSWORD`, then run `node --import tsx scripts/seedAdmin.ts` ( `/api/seed` is disabled in production)
+- Bootstrap admin locally only: set `ADMIN_EMAIL` / `ADMIN_PASSWORD`, then run `node --import tsx scripts/seedAdmin.ts` (`/api/seed` is disabled in production)
 
 ---
 
@@ -117,9 +117,10 @@ cp .env.example .env.local
 
 | Variable | Purpose |
 |---|---|
+| `NEXT_PUBLIC_SITE_URL` | `https://kindardent.com` |
 | `TURSO_DATABASE_URL` | Turso libSQL URL |
 | `TURSO_AUTH_TOKEN` | Turso auth token |
-| `NEXT_PUBLIC_REOWN_PROJECT_ID` | Reown Cloud project ID (optional) |
+| `NEXT_PUBLIC_REOWN_PROJECT_ID` | Reown Cloud project ID |
 | `PAYLOAD_SECRET` | Payload CMS secret |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Local admin seed only |
 
@@ -139,12 +140,13 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Description |
 |---|---|
-| `/` | Commerce hero + new arrivals |
-| `/buy` | `$KDAT` swap UI + wallet connect |
-| `/profile` | Wallet-gated profile (Turso) |
-| `/whitepaper` | Tokenomics |
-| `/stores` | Flagship store index |
-| `/stores/[city]` | Per-city store page |
+| `/` | Auto-redirects to locale (e.g. `/en`) |
+| `/[lang]` | Commerce hero + new arrivals |
+| `/[lang]/buy` | `$KDAT` swap UI + wallet connect |
+| `/[lang]/profile` | Wallet-gated profile (Turso) |
+| `/[lang]/whitepaper` | Tokenomics |
+| `/[lang]/stores` | Flagship store index |
+| `/admin` | Payload CMS admin |
 
 ---
 
