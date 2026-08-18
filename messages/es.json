@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "Kindard Kids",
+    "defaultTitle": "Kindard Kids — Streetwear premium para niños",
+    "defaultDescription": "Streetwear premium para niños desde Ámsterdam. Calidad indestructible, movimiento libre, materiales responsables."
+  },
+  "nav": {
+    "shopAll": "Ver todo",
+    "whitepaper": "Whitepaper",
+    "invest": "Invertir",
+    "cpStructure": "Estructura CP",
+    "profile": "Perfil",
+    "connectWallet": "Conectar wallet",
+    "shopExternal": "Tienda en kindard.com",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "home": "Inicio Kindardent",
+    "language": "Idioma"
+  },
+  "footer": {
+    "joinTribe": "ÚNETE A LA TRIBU",
+    "joinSub": "DROPS EXCLUSIVOS. ACCESO ANTICIPADO. NADA MÁS.",
+    "emailPlaceholder": "TU CORREO",
+    "subscribe": "SUSCRIBIRSE →",
+    "legal": "Legal",
+    "help": "Ayuda",
+    "company": "Empresa",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "cookies": "Configuración de cookies",
+    "helpContact": "Ayuda y contacto",
+    "shipping": "Envíos",
+    "returns": "Devoluciones y cambios",
+    "track": "Seguir mi pedido",
+    "sizeGuide": "Guía de tallas",
+    "about": "Sobre Kindard",
+    "sustainability": "Sostenibilidad",
+    "careers": "Empleo",
+    "stores": "Tiendas",
+    "cpStructure": "Estructura CP",
+    "copyright": "Kindard Kids — Ámsterdam",
+    "madeWith": "HECHO CON INTENCIÓN"
+  },
+  "home": {
+    "dropLabel": "DROP 01 — YA DISPONIBLE",
+    "heroTitle": "SIN COMPROMISOS. SOLO ROPA.",
+    "heroCta": "INVERTIR EN EL TOKEN",
+    "newArrivals": "Novedades",
+    "viewAll": "Ver todo",
+    "quickAdd": "Añadir rápido"
+  },
+  "buy": {
+    "title": "INVERTIR EN $KDAT",
+    "subtitle": "El token de utilidad premium del ecosistema Kindardent. Opera con seguridad en Ethereum.",
+    "whyInvest": "¿POR QUÉ INVERTIR?",
+    "swapTitle": "CAMBIAR ETH POR $KDAT",
+    "confirmSwap": "CONFIRMAR CAMBIO",
+    "walletHint": "Asegúrate de que tu wallet esté conectada a Ethereum Mainnet."
+  },
+  "profile": {
+    "connectTitle": "CONECTA TU WALLET",
+    "connectBody": "Tu perfil está vinculado a tu dirección Ethereum. Conéctate para acceder a tu panel.",
+    "loading": "Cargando perfil…"
+  }
+}

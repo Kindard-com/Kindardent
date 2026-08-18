@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import FaqAccordion from "../components/FaqAccordion";
-import HelpTrackForm from "../components/HelpTrackForm";
+import FaqAccordion from "@/app/components/FaqAccordion";
+import HelpTrackForm from "@/app/components/HelpTrackForm";
 
 export const metadata: Metadata = {
   title: "Help & Contact",

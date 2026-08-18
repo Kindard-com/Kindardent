@@ -1,33 +1,43 @@
 "use client";
 import Link from "next/link";
-
-const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Cookie Settings", href: "/cookie-settings" },
-];
-
-const helpLinks = [
-  { label: "Help & Contact", href: "https://kindard.com/help" },
-  { label: "Shipping Info", href: "https://kindard.com/shipping" },
-  { label: "Returns & Exchanges", href: "https://kindard.com/returns" },
-  { label: "Track My Order", href: "https://kindard.com/track" },
-  { label: "Size Guide", href: "https://kindard.com/size-guide" },
-  { label: "CP Structure", href: "https://kindard.com/Structure_company" },
-];
-
-const companyLinks = [
-  { label: "About Kindard", href: "https://kindard.com/about" },
-  { label: "Sustainability", href: "https://kindard.com/sustainability" },
-  { label: "Careers", href: "https://kindard.com/careers" },
-  { label: "Stores", href: "https://kindard.com/stores" },
-];
+import { useI18n } from "@/app/context/I18nProvider";
+import { localePath } from "@/lib/i18n/config";
 
 export default function SiteFooter() {
-  return (
-    <footer style={{ borderTop: "var(--border-width) solid var(--black)", backgroundColor: "var(--white)" }}>
+  const { locale, t } = useI18n();
 
-      {/* Newsletter strip */}
+  const legalLinks = [
+    { label: t.footer.privacy, href: localePath(locale, "/privacy") },
+    { label: t.footer.terms, href: localePath(locale, "/terms") },
+    { label: t.footer.cookies, href: localePath(locale, "/cookie-settings") },
+  ];
+
+  const helpLinks = [
+    { label: t.footer.helpContact, href: localePath(locale, "/help") },
+    { label: t.footer.shipping, href: localePath(locale, "/shipping") },
+    { label: t.footer.returns, href: localePath(locale, "/returns") },
+    { label: t.footer.track, href: localePath(locale, "/track") },
+    { label: t.footer.sizeGuide, href: localePath(locale, "/size-guide") },
+    {
+      label: t.nav.cpStructure,
+      href: localePath(locale, "/Structure_company"),
+    },
+  ];
+
+  const companyLinks = [
+    { label: t.footer.about, href: localePath(locale, "/about") },
+    { label: t.footer.sustainability, href: localePath(locale, "/sustainability") },
+    { label: t.footer.careers, href: localePath(locale, "/careers") },
+    { label: t.footer.stores, href: localePath(locale, "/stores") },
+  ];
+
+  return (
+    <footer
+      style={{
+        borderTop: "var(--border-width) solid var(--black)",
+        backgroundColor: "var(--white)",
+      }}
+    >
       <div
         style={{
           backgroundColor: "var(--black)",
@@ -51,7 +61,7 @@ export default function SiteFooter() {
               lineHeight: 1,
             }}
           >
-            JOIN THE TRIBE
+            {t.footer.joinTribe}
           </p>
           <p
             style={{
@@ -64,19 +74,25 @@ export default function SiteFooter() {
               marginTop: "0.35rem",
             }}
           >
-            EXCLUSIVE DROPS. EARLY ACCESS. NOTHING ELSE.
+            {t.footer.joinSub}
           </p>
         </div>
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          style={{ display: "flex", gap: "0", flex: "1", maxWidth: "480px", minWidth: "280px" }}
+          style={{
+            display: "flex",
+            gap: "0",
+            flex: "1",
+            maxWidth: "480px",
+            minWidth: "280px",
+          }}
         >
           <input
             type="email"
             id="footer-newsletter-email"
-            placeholder="YOUR EMAIL"
-            aria-label="Email address for newsletter"
+            placeholder={t.footer.emailPlaceholder}
+            aria-label={t.footer.emailPlaceholder}
             style={{
               flex: 1,
               padding: "0.75rem 1rem",
@@ -107,12 +123,11 @@ export default function SiteFooter() {
               whiteSpace: "nowrap",
             }}
           >
-            SUBSCRIBE →
+            {t.footer.subscribe}
           </button>
         </form>
       </div>
 
-      {/* Links grid */}
       <div
         style={{
           display: "grid",
@@ -122,21 +137,32 @@ export default function SiteFooter() {
         }}
       >
         {[
-          { title: "Legal", links: legalLinks },
-          { title: "Help", links: helpLinks },
-          { title: "Company", links: companyLinks },
+          { title: t.footer.legal, links: legalLinks },
+          { title: t.footer.help, links: helpLinks },
+          { title: t.footer.company, links: companyLinks },
         ].map((col, i) => (
           <div
             key={col.title}
             style={{
               padding: "2rem",
-              borderRight: i < 2 ? "var(--border-width) solid var(--black)" : "none",
+              borderRight:
+                i < 2 ? "var(--border-width) solid var(--black)" : "none",
             }}
           >
-            <p className="label-caps" style={{ color: "var(--mid)", marginBottom: "1rem" }}>
+            <p
+              className="label-caps"
+              style={{ color: "var(--mid)", marginBottom: "1rem" }}
+            >
               {col.title}
             </p>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.6rem",
+              }}
+            >
               {col.links.map((l) => (
                 <li key={l.href}>
                   <Link
@@ -158,7 +184,6 @@ export default function SiteFooter() {
         ))}
       </div>
 
-      {/* Bottom bar */}
       <div
         style={{
           display: "flex",
@@ -170,10 +195,10 @@ export default function SiteFooter() {
         }}
       >
         <p className="label-caps" style={{ color: "var(--mid)" }}>
-          © {new Date().getFullYear()} Kindard Kids — Amsterdam
+          © {new Date().getFullYear()} {t.footer.copyright}
         </p>
         <p className="label-caps" style={{ color: "var(--mid)" }}>
-          MADE WITH INTENTION
+          {t.footer.madeWith}
         </p>
       </div>
     </footer>

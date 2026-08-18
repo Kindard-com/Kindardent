@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Web3ModalProvider } from "./context/Web3ModalProvider";
 import { Barlow, Barlow_Condensed, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import SiteHeader from "./components/SiteHeader";
-import SiteFooter from "./components/SiteFooter";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -29,20 +26,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Kindard Kids — Premium Kids Streetwear",
-    template: "%s | Kindard Kids",
-  },
-  description:
-    "Kindard Kids — premium children's streetwear from Amsterdam. Indestructible quality, unrestricted movement, guilt-free materials.",
-  keywords: ["kids streetwear", "children's fashion", "premium kids clothing", "Amsterdam fashion"],
-  icons: {
-    icon: "/favicon.ico",
-  },
-  openGraph: {
-    siteName: "Kindard Kids",
-    type: "website",
-  },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://kindardent.com"
+  ),
 };
 
 export default function RootLayout({
@@ -53,15 +39,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${barlowCondensed.variable} ${barlow.variable} ${playfair.variable}`}
     >
-      <body>
-        <Web3ModalProvider>
-          <SiteHeader />
-          {children}
-          <SiteFooter />
-        </Web3ModalProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

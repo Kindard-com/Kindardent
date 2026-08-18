@@ -18,6 +18,7 @@ import { Footer } from './globals/Footer'
 import { HomePage } from './globals/HomePage'
 
 export default buildConfig({
+  serverURL: process.env.NEXT_PUBLIC_SITE_URL || "https://kindardent.com",
   admin: {
     user: 'users',
     importMap: {
